@@ -22,20 +22,61 @@ screen_2_5d = pygame.display.set_mode(dimensions)
 clock = pygame.time.Clock()
 fps = 60
 
-screen_2d.fill(black)
+
 ###############
 
 
-def draw2d(dimensions):
-    pass
+def draw2d():
+    map = [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+    ]
+    screen_2d.fill(black)
+    lines = 40
 
 
-run = True
+def main():
 
-while run:
-    clock.tick(fps)
-    for i in pygame.event.get():
-        if i.type == pygame.QUIT:
-            run = False
+    run = True
 
-    pygame.display.update()
+    while run:
+        clock.tick(fps)
+        for i in pygame.event.get():
+            if i.type == pygame.QUIT:
+                run = False
+
+        pygame.display.update()
