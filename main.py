@@ -56,7 +56,8 @@ def draw_map():
     ]
 
     screen_2d.fill(gray)
-
+    screen_2d.fill(green, pygame.Rect(width / 2, height / 2, width / 2, height / 2))
+    screen_2d.fill(blue, pygame.Rect(width / 2, 0, width / 2, height / 2))
     for y in range(0, len(map)):
         for x in range(0, len(map[0])):
 
