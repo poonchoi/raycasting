@@ -52,8 +52,7 @@ def draw_map():
     [1,0,1,1,1,0,1,1,1,1],
     [1,0,0,1,0,0,0,0,0,1],
     [1,0,0,1,0,0,1,0,0,1],
-    [1,1,1,1,1,1,1,1,1,1],
-    ]
+    [1,1,1,1,1,1,1,1,1,1]]
 
     screen_2d.fill(gray)
     screen_2d.fill(green, pygame.Rect(width / 2, height / 2, width / 2, height / 2))
@@ -87,9 +86,9 @@ def player_move(px, py):
 
 def player_rotate(pangle):
     keys = pygame.key.get_pressed()
-    if keys[pygame.K_RIGHT]:
+    if keys[pygame.K_n]:
         pangle += pvel_rotate
-    if keys[pygame.K_LEFT]:
+    if keys[pygame.K_m]:
         pangle -= pvel_rotate
 
     if pangle > 360 or pangle < -360:
@@ -127,6 +126,7 @@ def main(px, py, pangle):
         px, py = player_move(px, py)
         pangle = player_rotate(pangle)
         player_draw(px, py, pangle)
+        # pygame.draw.line(screen_2d, green, (px, py), (px + math.sin(pangle)*50, py + math.cos(pangle)*50), 5)
 
         pygame.display.update()
 
