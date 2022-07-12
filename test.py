@@ -84,7 +84,7 @@ def main(px, py):
                 n = n + 1
                 if map[int((len(map[0])/x)*100)][int((len(map)/y)*100)] != 0:
                     h = 1 / (0.02 * n)
-                    break
+
                 pygame.draw.line(screen, green, (i-30, height//2), (i-30, (height-h)//2), 5)
                 pygame.draw.line(screen, green, (i-30, height//2), (i-30, height-(height-h)//2), 5)
        
