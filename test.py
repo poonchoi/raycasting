@@ -82,9 +82,7 @@ def main(px, py):
             while True:
                 x, y = (x + cos, y + sin)
                 n = n + 1
-                print(int(x), int(y))
-                print(x,y)
-                if map[int(x)][int(y)] != 0:
+                if map[int((len(map[0])/x)*100)][int((len(map)/y)*100)] != 0:
                     h = 1 / (0.02 * n)
                     break
                 pygame.draw.line(screen, green, (i-30, height//2), (i-30, (height-h)//2), 5)
